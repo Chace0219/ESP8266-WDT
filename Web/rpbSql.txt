@@ -1,0 +1,45 @@
+CREATE DATABASE rpb;
+
+Use rpb;
+
+
+
+CREATE TABLE `logging` (
+  `id` int(255) UNSIGNED NOT NULL,
+  `devId` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `actionType` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `message` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `logTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+CREATE TABLE `status` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `devId` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `wdten` varchar(255) COLLATE utf8_unicode_ci,
+  `status` varchar(255) COLLATE utf8_unicode_ci,
+  `serverIP` varchar(255) COLLATE utf8_unicode_ci,
+  `wdttime` varchar(255) COLLATE utf8_unicode_ci,
+  `localIP` varchar(255) COLLATE utf8_unicode_ci,
+  `statusTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+ALTER TABLE `logging`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`id`);
+
+
+
+
+ALTER TABLE `logging`
+  MODIFY `id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+
+
+ALTER TABLE `status`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
