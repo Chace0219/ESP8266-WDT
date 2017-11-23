@@ -1,0 +1,17 @@
+﻿603 207 173
+6k96xw
+
+http://omgllc.ethosdistro.com/?json=yes
+
+"gpus":"6","miner_instance":6,"
+if miner instance is lower the GPU's it needs a reboot
+
+I dont wanna do anything on the servers.
+it has to be all on the panel, we cant run individual cronjobs on the servers(rigs)
+cause It means updating and keeping track of that, which can be evaded by simply - reading the API, and having the remote panel "sudo hard-reboot" or "power cycle"
+
+so its 2 events.
+1 - Reboot if GPU is down or instance's are down
+2 - power cycle of the server(rig) is responding to ping but wont allow ssh
+
+I have servers that needs to be rebooted cause GPU crash, or cause "linux load is too high" those servers will respond to ping but are not working
